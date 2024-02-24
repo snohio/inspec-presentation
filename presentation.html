@@ -19,6 +19,11 @@
         font-family: 'Roboto Slab';
         font-weight: normal;
       }
+			h4 {
+				font-family: Yanone Kaffeesatz;
+				font-size: small;
+				text-align: left;
+			}
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 			.foo
 			{
@@ -37,19 +42,16 @@ class: foo, center
 <br>
 <img src="./assets/myphoto-socialbook-440.png" align="right" width="150")>
 <br>
-**Mike Butler**
-
-Orlando DevOps Community group - Co Organizer
-
-Solutions Architect - Progress Chef
+**Mike Butler**<br>
+Orlando DevOps Community group - Co Organizer<br>
+Solutions Architect - Progress Chef<br>
+#### 1.0.0
 ???
 * Hello and Welcome to Orlando Code Camp and this presentation of Utilizing Chef Inspec Across your Entire DevOps Lifecycle.
 * Also, I like to call this "Who put the Sec in the DevSecOps i ops"
 * My name is Mike Butler. I am a Solutions Architect for Progress Chef and also a co-organizer for Orlando DevOps Community Group.
 * I have been with Progress Chef for about two and a half years. Prior to coming to Chef, I was the product owner and manager for the Chef deployment at Optum Technologies (the IT part of United HealthGroup).
 * In this presentation we are going to look at how you can utilize Chef Inspec across your DevOps Lifecycle. 
-<img src="https://www.360managed.com.au/wp-content/uploads/2019/01/Inforgraphic2_2.png" class="center" width="450">
-
 ---
 class: center, foo, middle
 <img src="https://t3.ftcdn.net/jpg/04/31/82/90/360_F_431829099_KAjG63az6DIdFmB1lqrOtAOq0mB17prH.jpg" class="center" width="750">
@@ -99,7 +101,7 @@ class: center, middle, foo
 * These can also be Big C Compliance where it applies to items that are involved in an actual audit.
 * `Test-Kitchen` is a tool that we use to apply that application code with the configuration code and tested against that Compliance Profile. We'll talk more about that in a bit.
 ---
-
+class: foo
 ## CIS Benchmark for Ubuntu 20.04
 <br>
 ### Example:
@@ -126,8 +128,9 @@ end
 Looking at this example. Let's think of our application that is going to be on that server. If our application requires `cups` then we know we are going to need an exception for it or work with the vendor to find something else.
 > Remember this for the section of this presentation.
 ---
+class: center, foo
 # White Board It
-
+<img src="https://miro.medium.com/v2/resize:fit:1400/0*XIzMQLb_RV5i-WyU" width="650">
 ???
 * Let's ask and make sure that folks understand that the platform standard has been defined.
 * Now is the time to ask questions! Do we have an understanding on how on Inspec Profile (Compliance Profile) can be used to secure a platform. 
@@ -199,6 +202,11 @@ class: foo, center
 <img src="https://live.staticflickr.com/3579/3534506648_8d0d0f5fb6_b.jpg" width="750" class="center">
 ???
 Demo
+---
+class: center, foo, middle
+<img src="https://t3.ftcdn.net/jpg/04/31/82/90/360_F_431829099_KAjG63az6DIdFmB1lqrOtAOq0mB17prH.jpg" class="center" width="750">
+???
+* For real this time!
 ---
 class: center, foo
 # How to find me
