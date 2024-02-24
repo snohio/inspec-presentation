@@ -23,7 +23,7 @@
 			.foo
 			{
         background: hsl(0, 0%, 15%);
-        background-color: #81f7c6;
+        background-color: #d4f3ff;
       }
 </style>
   </head>
@@ -33,8 +33,8 @@
 class: foo, center
 # Utilizing Chef Inspec
 ### Across Your Entire DevOps Lifecycle.
-<img src="https://www.360managed.com.au/wp-content/uploads/2019/01/Inforgraphic2_2.png" class="center" width="450">
-
+<img src="./assets/OrlandoDevOps2-06.jpg" width="450">
+<br>
 <img src="./assets/myphoto-socialbook-440.png" align="right" width="150")>
 <br>
 **Mike Butler**
@@ -48,6 +48,8 @@ Solutions Architect - Progress Chef
 * My name is Mike Butler. I am a Solutions Architect for Progress Chef and also a co-organizer for Orlando DevOps Community Group.
 * I have been with Progress Chef for about two and a half years. Prior to coming to Chef, I was the product owner and manager for the Chef deployment at Optum Technologies (the IT part of United HealthGroup).
 * In this presentation we are going to look at how you can utilize Chef Inspec across your DevOps Lifecycle. 
+<img src="https://www.360managed.com.au/wp-content/uploads/2019/01/Inforgraphic2_2.png" class="center" width="450">
+
 ---
 class: center, foo, middle
 <img src="https://t3.ftcdn.net/jpg/04/31/82/90/360_F_431829099_KAjG63az6DIdFmB1lqrOtAOq0mB17prH.jpg" class="center" width="750">
@@ -130,20 +132,28 @@ Looking at this example. Let's think of our application that is going to be on t
 * Let's ask and make sure that folks understand that the platform standard has been defined.
 * Now is the time to ask questions! Do we have an understanding on how on Inspec Profile (Compliance Profile) can be used to secure a platform. 
 ---
+class: center
 # Infinity Loop
-
+<img src="./assets/chef-cycle.png" width="600">
 ???
 * Draw it and talk about the steps
 * Walk through the different phases and talk about what they mean (to me)
 * We're going to break this into threeish phases.
 ---
-# Phase Zero - Plan! This is where you look at your "Human Readable" Compliance Code / Rules
+class: center
+# Phase Zero
+## Plan!
+<img src="./assets/chef-cycle.png" width="600">
 ???
+* This is where you look at your "Human Readable" Compliance Code / Rules
 * Security / Platform Team has given us the standards. We should read them! At the very least search for things that might impact us. (thinking back to the CUPS example - search for the packages we might need as dependencies.)
 * This could also be the Java Package must be greater than  17. I actually run a no-longer supported application that uses Java 8.
 * Looking at this code, knowing it is going to be applied to our platform delivery, we can either pivot up front, talk to security about an exception, or have a deeper discussion with the vendor. We're not going to get into Waivers at this time, just understand they are a thing that allows us to *not fail* a test.
 ---
-# Phase one
+class: center
+# Phase One
+## Configure (Code, Build, Test)
+<img src="./assets/chef-cycle.png" width="600">
 ???
 * Here is where we combine our application & configuration code for our particular need. We Code it.
 * This should be a process that is done "locally", meaning on your laptop.
@@ -151,8 +161,12 @@ Looking at this example. Let's think of our application that is going to be on t
 * The Test is another function of `test-kitchen` where we can apply those baseline profiles to make sure we didn't fail any. Maybe we missed reading something or just didn't care to read the Compliance Code standards.
 * Another thing about Compliance is Code is that *YOU also have configuration standards for your application*, or at least you should. You should be writing your own tests to make sure that the outcome of what you want is there.
 ---
-# Phase two
+class: center
+# Phase Two
+Deploy (Test, Release, Deploy)
+<img src="./assets/chef-cycle.png" width="600">
 ???
+* aka CI/CD
 * This phase begins our "hands off keyboard" zone. Many of you may be familiar with "Separation of Duties", that Ops duty from here on out should be automated!
 * We usually start this phase automatically when code is pushed to a MAIN branch of a Repo. This is the CI/CD Pipeline!
 * Test should overlap with Phase One. We should be doing the exact same test we did locally.
@@ -161,7 +175,10 @@ Looking at this example. Let's think of our application that is going to be on t
 * Release might be the last part that a human touches. Some organizations like to have a final review step, validating that the code is good. Making sure your did what you were supposed to do one more time. A button is hit, and then..
 * Deploy. In our case, this is where the cookbook that installs, manages that application is promoted and made available for the servers.
 ---
-# Phase three
+class: center
+# Phase Three
+## Manage (Operate, Monitor)
+<img src="./assets/chef-cycle.png" width="600">
 ???
 * Again, we kind of blend Deploy and Operate here.
 * I can't stress enough that we should all really get to a point where Operate / Support is refactoring the configuration code to accomplish our goals.
@@ -182,8 +199,9 @@ Looking at this example. Let's think of our application that is going to be on t
 ???
 Demo
 ---
-class: foo
-# fin
+class: foo, center
+<img src="./assets/odo-flyer-occ.png" width="800">
+
 
 </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js">
